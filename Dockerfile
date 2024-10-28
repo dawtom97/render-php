@@ -8,7 +8,7 @@ WORKDIR /var/www/html
 COPY . .
 
 # Kilka bibliotek (instalacja)
-RUN docker-php-ext-install pdo php-pqsql pdo-pgsql
+RUN docker-php-ext-install pdo pdo-pgsql
 
 # instalacja komposera
 COPY --from=composer:latest /usr/bin/composer /user/bin/composer
